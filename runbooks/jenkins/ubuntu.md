@@ -12,7 +12,7 @@ sudo apt-get install jenkins
 Use NGINX 
 
 ```
-sudo aptitude -y install nginx
+sudo apt -y install nginx
 ```
 
 Remove the default site
