@@ -1,6 +1,8 @@
 # Install Docker on Ubuntu
 
-As root
+## 16.0.4
+
+As root user (sudo su -)
 
 ```
 apt-get install apt-transport-https ca-certificates curl software-properties-common
