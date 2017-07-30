@@ -31,5 +31,26 @@ steps:
 
 ## Runbooks CLI
 
-runbooks install docker-ce
+Commands
 
+### Describe
+
+```
+$ runbooks describe docker-ce
+
+$ description: Install Docker CE on Ubuntu 16.04
+$ steps to execute:
+$ ============================
+$ apt-get install apt-transport-https ca-certificates curl software-properties-common
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+$ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+$ apt-get update
+$ apt-get install -y docker-ce
+```
+
+
+### Execute
+
+```
+runbooks exec docker-ce
+```
