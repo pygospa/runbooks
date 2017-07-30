@@ -13,9 +13,23 @@ This might contain not only how to install the package but more detailed informa
 
 ## Notes
 
-- Decide on the format for runbooks. Is it a markdown tutorial or something more brief like a script?
-- API
-- Some kind of CLI tool to execute a runbook
-- Concept of verification. Show the Github contributors.
-- Auto testing?
+Example
+
+```yaml
+name: docker-ce
+description: Install Docker CE un Ubuntu 16.04
+os: ubuntu
+version: 16.04
+sudo: true
+steps:
+  - apt-get install apt-transport-https ca-certificates curl software-properties-common
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+  - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+  - apt-get update
+  - apt-get install -y docker-ce
+```
+
+## Runbooks CLI
+
+runbooks install docker-ce
 
